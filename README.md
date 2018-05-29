@@ -37,7 +37,7 @@ languages.
 ----
 ## Decision
 ### Launching
-Run the file "rightApps"
+Run the file "rightApps.py"
 ### Input data
 * start hour
 * end hour
