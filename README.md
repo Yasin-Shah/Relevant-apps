@@ -36,6 +36,8 @@ languages.
 
 ----
 ## Decision
+### Launching
+Run the file "rightApps"
 ### Input data
 * start hour
 * end hour
