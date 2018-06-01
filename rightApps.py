@@ -140,9 +140,9 @@ def addGuestRevenue(order, revenue, GuestRevenue):
 
 
 def setIncomeCoef(UserCoef, HourRev):
-	"""
-	Определить коэфициент затрат конкретного пользователя относительно общих затрат за час
-	"""
+    """
+    Определить коэфициент затрат конкретного пользователя относительно общих затрат за час
+    """
     Revenue=0
     for appRev in HourRev:
         Revenue+=HourRev[appRev]
@@ -153,10 +153,10 @@ def setIncomeCoef(UserCoef, HourRev):
 
 
 def setAppRelevance(apps, UserCoef, users):
-	"""
-	Задать релевантность каждого приложения, с учётом количества проведенного времени в нём и
-	потраченых денег пользователя, который посетил это приложение
-	"""
+    """
+    Задать релевантность каждого приложения, с учётом количества проведенного времени в нём и
+    потраченых денег пользователя, который посетил это приложение
+    """
     AppRelevance = {'AirHockey': 0, 'Restaurant': 0, 'Memory': 0, 'News': 0, 'Wallpapers': 0, 'PhotoShare': 0, 'JigsawPuzzle': 0, 'Paint':0}
     for user in UserCoef:   #users = SessionIDes
         if user.upper() in users:
@@ -209,9 +209,9 @@ def analyze(start, end, weekday, forHour, Rel, dateTimeRevs):
 
 
 def visualization(Rel, AppRel, HourRev, DayRev):
-	"""
-	Постройка почасовых диаграмм дохода и релевантности приложений
-	"""
+    """
+    Постройка почасовых диаграмм дохода и релевантности приложений
+    """
     df1 = DataFrame(Rel, columns=[val for val in AppRel[0]], index = [hour for hour in range(startTime, endTime)])
     df1.plot(kind='bar', stacked=True)
     df2 = DataFrame(HourRev, columns=[app for app in DayRev], index = [hour for hour in range(startTime, endTime)])
@@ -221,9 +221,9 @@ def visualization(Rel, AppRel, HourRev, DayRev):
 
 
 def output(userDay, startTime, AppRel, DateTimeRevs):
-	"""
-	Вывести релевантные приложения по каждому часу заданного дня и промежутка времени
-	"""
+    """
+    Вывести релевантные приложения по каждому часу заданного дня и промежутка времени
+    """
     print('=========================================')
     print('WEEKDAY: ',userDay +1 )
     print('=========================================')
