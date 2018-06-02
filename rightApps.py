@@ -123,16 +123,16 @@ def appRevenue(orders, link, apps):
 
 
 def setHourRev(revs, hourRevs):
-	"""
-	Добавить в список для визуализации
-	"""
+    """
+    Добавить в список для визуализации
+    """
     hourRevs.append([revs[rev] for rev in revs])
 
 
 def addGuestRevenue(order, revenue, GuestRevenue):
-	"""
-	Добавить доход от конкретного пользователя
-	"""
+    """
+    Добавить доход от конкретного пользователя
+    """
     if order in GuestRevenue:
         GuestRevenue[order]+=revenue
     else:
